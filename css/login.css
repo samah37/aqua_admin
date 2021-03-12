@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+   
+    background-image: linear-gradient(45deg,#f7cbcb,#474747);
+    height: 100%; 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-img {
+    position: absolute;
+    background-image: url("../img/Artboard_3.png");
+  height: 100%;
+  width: 50%;
+  background-repeat: no-repeat;
+
+   
+  }
+ 
+.login-page {
+  position: absolute;
+  width: 40%;
+  padding: 0% 0 0;
+  
+ 
+}
+.login-page .form .login{
+  margin-top: 2%;
+margin-bottom: 0px;
+}
+.form {
+  position: absolute;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 40%;
+  
+  padding: 2%;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  height: 55%;
+  left: 55%;
+  top: 20%;
+  border-radius:5%;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding:5%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #8f3232;
+  background-image: linear-gradient(45deg,#0da18d,#08ac4b);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  overflow: visible;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+}
+.bg-logo {
+  position: absolute;
+  background-image: url("../img/logo.png");
+height: 100%;
+width: 100%;
+background-repeat: no-repeat;
+left: 20%;
+top: -15%;
+
+
+ 
+}
