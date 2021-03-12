@@ -211,7 +211,7 @@
                   <label class="control-label col-md-3">Image Upload</label>
                   
                           
-                        <input type="file" class="default" name="avatar" />
+                        <input type="file" class="default" name="img" >
                         </span>
                         
                       </div>

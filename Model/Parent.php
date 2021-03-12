@@ -43,6 +43,9 @@
     $qry = "INSERT INTO parents (`id_parent`, `name`, `family_name`, `adresse`, `phone1`, `phone2`, `phone3`, `email`) VALUES (NULL, '$Name', '$Family_Name', '$Adress', '$Phone1', '$Phone2', '$Phone3', '$Email')";
     $result = $this->connect->prepare($qry);  
     $result->execute();  
+    $qry1 = "INSERT INTO `users` (`id_user`, `email`, `password`) VALUES (NULL, '$Email', '$Name.$Family_Name')";
+    $result1 = $this->connect->prepare($qry1);  
+    $result1->execute();  
     if ($result) {
      return "Insert Data Successfully.";
      echo "Insert Data Successfully.";

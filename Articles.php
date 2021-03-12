@@ -168,11 +168,14 @@
             <h4 contenteditable="true"><?php echo $detail['titre'];?></h4>
           </div>
           <div class="col-md-6">
+          <?php          echo "jomla";?>
+          <?php          echo $detail['image'];?>
             <p contenteditable="true" class="mt"><?php          echo $detail['description'];?></p>
             <p contenteditable="true"><?php          echo $detail['description'];?></p>
             <p contenteditable="true"><?php          echo $detail['description'];?></p>
             <p contenteditable="true"><?php          echo $detail['description'];?></p>
           </div>
+          <a class="fancybox" href="img/portfolio/<?php          echo $detail['image'];?>"><img class="img-responsive" src="img/portfolio/<?php          echo $detail['image'];?>" alt=""></a>
         </div>
         <div class="mt"></div>
         <?php }?>

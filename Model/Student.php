@@ -73,8 +73,12 @@
         
 
     $qry = "INSERT INTO `students` (`id_student`, `name`, `family_name`, `email`, `adresse`, `id_tutor`, `id_class`) VALUES (NULL, '$Name', '$Family_Name', '$Email', '$Adress', '$id_parent', '$class')";
+    
     $result = $this->connect->prepare($qry);  
     $result->execute();  
+    $qry1 = "INSERT INTO `users` (`id_user`, `email`, `password`) VALUES (NULL, '$Email', '$Name.$Family_Name')";
+    $result1 = $this->connect->prepare($qry1);  
+    $result1->execute();  
     if ($result) {
      return "Insert Data Successfully.";
      echo "Insert Data Successfully.";

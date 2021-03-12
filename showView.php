@@ -13,7 +13,7 @@
 </table>
 </form>
 <?php
-$con = mysqli_connect('localhost','root','','admin_aqua') or die('Unable To connect');
+$con = mysqli_connect('','root','','admin_aqua') or die('Unable To connect');
 
 
 if(isset($_POST["submit2"]))
