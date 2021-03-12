@@ -144,7 +144,7 @@
           </li>
            <!-- shows Mangement-->
            <li class="sub-menu">
-            <a href="javascript:;">
+            <a href="showView.php">
               <i class="fa fa-picture-o"></i>
               <span>Shows manager</span>
               </a>

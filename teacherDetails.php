@@ -368,7 +368,87 @@
     </section>
    
   </section>
- 
+  <section id="main-content">
+      
+        
+         
+          
+    <?php
+                        $host = "localhost";  
+                         $username = "root";  
+                        $password = "";  
+                        $database = "admin_aqua";  
+                          $message = "";  
+        
+        
+                               $conn = new PDO("mysql:host=$host; dbname=$database", $username, $password);  
+                               $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+         
+                               $stmnt2=$conn->prepare("SELECT * FROM teachers ");
+                              $stmnt2->execute();
+                              $details2=$stmnt2->fetchAll();
+
+                              foreach($details2 as $detail2){
+                                $group=$detail2['id_teacher'];
+                                ?>
+                                <section class="wrapper">
+      <h3><i class="fa fa-angle-right"></i> Teacher:<?php          echo $detail2['name']; echo " -- "; echo $detail2['family_name']; ?> </h3>
+                                <div class="row">
+       <div class="col-md-12">
+      <div class="content-panel">
+              
+              
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Session1</th>
+                    <th>Session2</th>
+                    <th>Session3</th>
+                    <th>Session4</th>
+                    <th>Session5</th>
+                    <th>Session6</th>
+                    <th>Session7</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <?php
+                       
+         
+                               $stmnt=$conn->prepare("SELECT * FROM meals ");
+                              $stmnt->execute();
+                              $details=$stmnt->fetchAll();
+
+                              foreach($details as $detail){
+                                $day= $detail['day'];?>
+                                 <tr>
+                                 <td><?php          echo $detail['day'];?></td>
+                                 <?php
+                               $stmnt1=$conn->prepare("SELECT * FROM session WHERE day= '$day' AND id_teacher= '$group' ORDER BY h_start ");
+                               $stmnt1->execute();
+                               $details1=$stmnt1->fetchAll();
+                               foreach($details1 as $detail1){
+         
+                              ?>
+                                
+                    <td><?php          echo $detail1['h_start']; echo " -- "; echo $detail1['h_end']; ?>
+                    <br></br><?php          echo "Class:"; echo $detail1['id_classrooms'];?></td>
+                    
+                             
+                              
+                    
+                 
+                  <?php }?>
+                  </tr>
+                  <?php }?>
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <?php }?>
+  </section>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>

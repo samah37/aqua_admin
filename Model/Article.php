@@ -28,22 +28,7 @@
     $article = $_POST['article'];
     $description1 = $_POST['Description'];
     $path_file_ext= $_POST['img'];
-    /*$directory="../img/";
-    $file=$_FILES['img']['name'];
-    $path = pathinfo($file);
-    $filename=$path['filename'];
-    echo "filenaame";
-    echo $filename;
-    $ext=$path['extension'];
-    $path_file_ext=$directory.$filename.".".$ext;
-    $temp_name = $_FILES['img']['tmp_name'];
-    if (file_exists($path_file_ext)) {
-      echo "Sorry, file already exists.";
-      }
-  else{
-      move_uploaded_file($temp_name,$path_file_ext);
-      echo "Congratulations! File Uploaded Successfully.";
-      }*/
+    
 
 
 
